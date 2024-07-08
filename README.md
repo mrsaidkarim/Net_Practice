@@ -25,6 +25,33 @@ A link-local address is an IP address that is automatically assigned to a device
 ## Obtaining an IP Address
 Once the device has a link-local address, it can then communicate with the router or DHCP server to request and obtain a proper IP address for internet communication. If there's no router involved, the device may directly communicate with the Internet Service Provider's infrastructure or the network it's connecting to.
 
+## Difference between Private and Public IP
+Public and private IP addresses are both essential for different networking scenarios. Public IP addresses facilitate global connectivity and Internet communication, while private IP addresses enable secure and efficient internal networking within homes and organizations.
+Feature         | Public IP Address                     | Private IP Address
+----------------|---------------------------------------|------------------------------------
+Scope           | Global                                | Local (within a private network)
+Uniqueness      | Unique across the Internet            | Unique within a private network
+Accessibility   | Directly accessible from the Internet | Not directly accessible from the Internet
+Assignment      | Assigned by ISPs and managed by IANA/RIRs | Assigned by local network administrators
+Usage           | Public-facing servers, websites, remote access | Home networks, corporate networks, IoT devices
+Range        | 10.0.0.0 – 10.255.255.255, 172.16.0.0 – 172.31.255.255, 192.168.0.0 – 192.168.255.255 | Besides private IP addresses, the rest are public.
+
+## Types of Network Topology 
+Network topology refers to the arrangement of different elements like nodes, links, and devices in a computer network. It defines how these components are connected and interact with each other. The various network topologies are:
+- Point to Point Topology: is a type of topology that works on the functionality of the sender and receiver. It is the simplest communication between two nodes, in which one is the sender and the other one is the receiver. Point-to-Point provides high bandwidth.
+- Mesh Topology: In a mesh topology, every device is connected to another device via a particular channel. In Mesh Topology, the protocols used are AHCP (Ad Hoc Configuration Protocols), DHCP (Dynamic Host Configuration Protocol), etc.
+- Star Topology: In Star Topology, all the devices are connected to a single hub through a cable. This hub is the central node and all other nodes are connected to the central node. The hub can be passive in nature i.e., not an intelligent hub such as broadcasting devices, at the same time the hub can be intelligent known as an active hub. Active hubs have repeaters in them. Coaxial cables or RJ-45 cables are used to connect the computers. In Star Topology, many popular Ethernet LAN protocols are used as CD(Collision Detection), CSMA (Carrier Sense Multiple Access), etc.
+- Bus Topology: Bus Topology is a network type in which every computer and network device is connected to a single cable. It is bi-directional. It is a multi-point connection and a non-robust topology because if the backbone fails the topology crashes. In Bus Topology, various MAC (Media Access Control) protocols are followed by LAN ethernet connections like TDMA, Pure Aloha, CDMA, Slotted Aloha, etc.
+- Ring Topology: In a Ring Topology, it forms a ring connecting devices with exactly two neighboring devices. A number of repeaters are used for Ring topology with a large number of nodes, because if someone wants to send some data to the last node in the ring topology with 100 nodes, then the data will have to pass through 99 nodes to reach the 100th node. Hence to prevent data loss repeaters are used in the network.
+- Tree Topology: This topology is the variation of the Star topology. This topology has a hierarchical flow of data. In Tree Topology, protocols like DHCP and SAC (Standard Automatic Configuration ) are used.
+- Hybrid Topology: This topological technology is the combination of all the various types of topologies we have studied above. Hybrid Topology is used when the nodes are free to take any form. It means these can be individuals such as Ring or Star topology or can be a combination of various types of topologies seen above. Each individual topology uses the protocol that has been discussed earlier.
+
+## TCP : Transmission Control Protocol
+It ensures reliable data transfer by breaking information into small packets, sending them across the network, and ensuring they arrive in the correct order at the destination.
+
+## Loopback Addresses
+The loopback address is an essential part of the network stack that allows a computer to communicate with itself. It is primarily used for testing, development, and diagnostics, ensuring that network applications and configurations work as intended without requiring an external network connection.
+
 ## TCP/IP Protocol
 TCP/IP, which stands for Transmission Control Protocol/Internet Protocol, is a set of networking protocols that allows computers to communicate over networks like the internet. It provides the basic framework for transmitting data between devices and ensuring that data arrives accurately and in order.
 
@@ -35,9 +62,9 @@ TCP/IP operates on a layered model, with TCP and IP forming the two main layers:
 
 - **Transport Layer**: TCP operates at this layer, providing reliable, connection-oriented communication between devices. UDP (User Datagram Protocol) is another protocol at this layer, offering a simpler, connectionless communication method suitable for applications that prioritize speed over reliability.
 
-- **Internet Layer**: IP operates at this layer, handling addressing and routing of packets across networks.
+- **Internet Layer**: IP operates at this layer, handling addressing and routing of packets across networks. (Network Layer)
 
-- **Link Layer**: This layer deals with the physical connection between devices, including protocols for transmitting data over Ethernet, Wi-Fi, or other physical mediums.
+- **Link Layer**: This layer deals with the physical connection between devices, including protocols for transmitting data over Ethernet, Wi-Fi, or other physical mediums. (Network Interface)
 
 
 ## Subnetting
