@@ -62,9 +62,9 @@ TCP/IP operates on a layered model, with TCP and IP forming the two main layers:
 
 - **Transport Layer**: TCP operates at this layer, providing reliable, connection-oriented communication between devices. UDP (User Datagram Protocol) is another protocol at this layer, offering a simpler, connectionless communication method suitable for applications that prioritize speed over reliability.
 
-- **Internet Layer**: IP operates at this layer, handling addressing and routing of packets across networks. (Network Layer)
+- **Internet Layer**: IP operates at this layer, handling addressing and routing of packets across networks.
 
-- **Link Layer**: This layer deals with the physical connection between devices, including protocols for transmitting data over Ethernet, Wi-Fi, or other physical mediums. (Network Interface)
+- **Network Access Layer**: This layer deals with the physical connection between devices, including protocols for transmitting data over Ethernet, Wi-Fi, or other physical mediums.
 
 
 ## Subnetting
